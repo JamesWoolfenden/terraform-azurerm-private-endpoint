@@ -29,7 +29,7 @@ resource "azurerm_virtual_network" "example" {
 # }
 
 resource "azurerm_subnet" "endpoint" {
-#checkov:skip=CKV2_AZURE_31:example  
+  #checkov:skip=CKV2_AZURE_31:example
   name                 = "endpoint"
   resource_group_name  = azurerm_resource_group.example.name
   virtual_network_name = azurerm_virtual_network.example.name
